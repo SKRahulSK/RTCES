@@ -1,0 +1,9 @@
+﻿cl : Command line warning D9002: ignoring unknown option '/wc4574'
+  main_exercise.c
+r:\dritte sem\rtces\exercises\ex1\chatterbox\exercise_01\freertos\chatterbox-app\win32-msvc\main_exercise.c(102): warning C4047: 'function': 'TaskHandle_t *const ' differs in levels of indirection from 'TaskHandle_t'
+r:\dritte sem\rtces\exercises\ex1\chatterbox\exercise_01\freertos\chatterbox-app\win32-msvc\main_exercise.c(102): warning C4024: 'xTaskCreate': different types for formal and actual parameter 6
+r:\dritte sem\rtces\exercises\ex1\chatterbox\exercise_01\freertos\chatterbox-app\win32-msvc\main_exercise.c(103): warning C4047: 'function': 'TaskHandle_t *const ' differs in levels of indirection from 'TaskHandle_t'
+r:\dritte sem\rtces\exercises\ex1\chatterbox\exercise_01\freertos\chatterbox-app\win32-msvc\main_exercise.c(103): warning C4024: 'xTaskCreate': different types for formal and actual parameter 6
+r:\dritte sem\rtces\exercises\ex1\chatterbox\exercise_01\freertos\chatterbox-app\win32-msvc\main_exercise.c(104): warning C4047: 'function': 'TaskHandle_t *const ' differs in levels of indirection from 'TaskHandle_t'
+r:\dritte sem\rtces\exercises\ex1\chatterbox\exercise_01\freertos\chatterbox-app\win32-msvc\main_exercise.c(104): warning C4024: 'xTaskCreate': different types for formal and actual parameter 6
+  WIN32.vcxproj -> R:\Dritte Sem\RTCES\Exercises\ex1\chatterbox\exercise_01\FreeRTOS\Chatterbox-App\WIN32-MSVC\.\Debug\RTOSDemo.exe
