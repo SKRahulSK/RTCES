@@ -98,9 +98,9 @@ void main_exercise(void)
 	/*
 	 * Create the three task instances.
 	 */
-	xTaskCreate(vChatterboxTask, "Chatterbox Task1", 10, &task1_params, TASK_CHATTERBOX_PRIORITY_TASK1, task1_params.pTaskHandle);
-	xTaskCreate(vChatterboxTask, "Chatterbox Task2", 1000, &task2_params, TASK_CHATTERBOX_PRIORITY_TASK2, task2_params.pTaskHandle);
-	xTaskCreate(vChatterboxTask, "Chatterbox Task3", 1000, &task3_params, TASK_CHATTERBOX_PRIORITY_TASK3, task3_params.pTaskHandle);
+	xTaskCreate(vChatterboxTask, "Chatterbox Task1", 1000, &task1_params, TASK_CHATTERBOX_PRIORITY_TASK1, &task1_params.pTaskHandle);
+	xTaskCreate(vChatterboxTask, "Chatterbox Task2", 1000, &task2_params, TASK_CHATTERBOX_PRIORITY_TASK2, &task2_params.pTaskHandle);
+	xTaskCreate(vChatterboxTask, "Chatterbox Task3", 1000, &task3_params, TASK_CHATTERBOX_PRIORITY_TASK3, &task3_params.pTaskHandle);
 
 	/*
 	 * Start the task instances.
@@ -121,7 +121,9 @@ void main_exercise(void)
 
 void vChatterboxTask(void* pvParameters)
 {
+
 	taskParams_t *task_params = (taskParams_t *)pvParameters;
+	
 	//uTaskCount - This is used internally to count the number of executions.
 	unsigned  uTaskCount = 0;
 	
@@ -142,7 +144,7 @@ void vChatterboxTask(void* pvParameters)
 			if (uTaskCount == TASK_CHATTERBOX_STOP_COUNT)
 			{
 				/* Stop the task three, once the the execution count reches 5*/
-				printf("%s Stopping now\n", task_params->cTaskString);
+				printf("Stopping Execution of %s now\n", task_params->cTaskString);
 				vTaskDelete(task_params->pTaskHandle);
 				task_params->pTaskHandle = NULL;
 			}
